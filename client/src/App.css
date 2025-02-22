@@ -2,8 +2,9 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-}
-
+} /*
+:root {
+} */
 .flex {
   display: flex;
   align-items: center;
@@ -396,4 +397,7 @@ video {
   .registerPage .container {
     width: 85%;
   }
+}
+::-webkit-scrollbar {
+  display: none;
 }/*# sourceMappingURL=App.css.map */
