@@ -4,7 +4,7 @@ import Dashboard from "./Components/Dashboard/Dashboard";
 import Welcome from "./Components/Welcome/Welcome";
 import Login from "./Components/Login/Login";
 import Register from "./Components/Register/Register";
-import Loading from "./Components/Loading/Loading";
+import Preloader from "./Components/Preloader/Preloader";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -44,16 +44,16 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isPreloader, setIsPreloader] = useState(true);
 
   useEffect(() => {
     setTimeout(() => {
-      setIsLoading(false);
+      setIsPreloader(false);
     }, 2000);
   }, []);
 
   return (
-    <div>{isLoading ? <Loading /> : <RouterProvider router={router} />}</div>
+    <div>{isPreloader ? <Preloader /> : <RouterProvider router={router} />}</div>
   );
 }
 

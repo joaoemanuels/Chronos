@@ -1,0 +1,104 @@
+.calendarContainer {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: #1f1c38;
+  border-radius: 10px;
+  padding: 16px;
+  color: #fff;
+  font-family: sans-serif;
+}
+.calendarContainer .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+.calendarContainer .header .navButton {
+  background-color: #403e5b;
+  border: none;
+  color: #fff;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.calendarContainer .header .addButton {
+  background-color: #4caf50;
+  border: none;
+  color: #fff;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.calendarContainer .header .monthTitle {
+  margin: 0;
+  font-size: 1.2rem;
+  text-transform: capitalize;
+}
+.calendarContainer .weekDaysRow {
+  display: flex;
+  justify-content: space-between;
+  background-color: #2f2c49;
+  padding: 8px 0;
+  border-radius: 4px;
+}
+.calendarContainer .weekDaysRow .weekDay {
+  flex: 1;
+  text-align: center;
+  font-weight: bold;
+}
+.calendarContainer .weekRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+.calendarContainer .weekRow .dayCell {
+  flex: 1;
+  margin: 2px;
+  padding: 10px 0;
+  text-align: center;
+  border-radius: 4px;
+}
+.calendarContainer .upcomingEvents {
+  margin-top: 16px;
+}
+.calendarContainer .upcomingEvents .card {
+  background-color: #2f2c49;
+  margin-bottom: 8px;
+  padding: 8px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+}
+.calendarContainer .upcomingEvents .card .cardDate {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+.calendarContainer .upcomingEvents .card .removeButton {
+  margin-left: 8px;
+  background-color: red;
+  border: none;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.calendarContainer .addForm {
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.calendarContainer .addForm .input {
+  padding: 8px;
+  border-radius: 4px;
+  border: none;
+}
+.calendarContainer .addForm .submitButton {
+  background-color: #4caf50;
+  border: none;
+  color: #fff;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  align-self: flex-start;
+}/*# sourceMappingURL=CalendarEvents.css.map */

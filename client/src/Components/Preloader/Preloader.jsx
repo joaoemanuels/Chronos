@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import React from "react";
 import Logo from "../../assets/icon/tokenlogo.png";
-import "./Loading.css";
+import "./Preloader.css";
 
 const Preloader = ({ onFinish }) => {
   const [visible, setVisible] = useState(true);
@@ -9,8 +9,10 @@ const Preloader = ({ onFinish }) => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setVisible(false);
-      onFinish();
-    }, 2000);
+      if (typeof onFinish === "function") {
+        onFinish();
+      }
+    }, 3000);
 
     return () => clearTimeout(timer);
   }, [onFinish]);
