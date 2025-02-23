@@ -49,13 +49,11 @@ function App() {
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
-    }, 2000); 
+    }, 2000);
   }, []);
 
   return (
-    <div>
-      {isLoading ? <Loading /> : <RouterProvider router={router} />}
-    </div>
+    <div>{isLoading ? <Loading /> : <RouterProvider router={router} />}</div>
   );
 }
 

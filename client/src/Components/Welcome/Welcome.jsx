@@ -1,5 +1,5 @@
-import React from 'react'
-import './Welcome.css'
+import React from "react";
+import "./Welcome.css";
 import { Link } from "react-router-dom";
 import backgroundImage from "../../assets/backgroundWelcome.png";
 
@@ -8,7 +8,9 @@ const Welcome = () => {
     <div style={styles.container}>
       <div style={styles.box}>
         <h1 style={styles.titleBox}>Bem-vindo!</h1>
-        <p style={styles.contentBox}>Seja bem vindo e realize o login ou crie uma nova conta em nosso</p>
+        <p style={styles.contentBox}>
+          Seja bem vindo e realize o login ou crie uma nova conta em nosso
+        </p>
       </div>
       <div style={styles.buttonContainer}>
         <Link to="/Login" style={{ ...styles.btn, ...styles.btn1 }}>
@@ -22,8 +24,6 @@ const Welcome = () => {
   );
 };
 
-
-
 const styles = {
   container: {
     display: "flex",
@@ -34,24 +34,23 @@ const styles = {
     height: "100vh",
     width: "100%",
     margin: "0",
-    backgroundColor:"blue",
+    backgroundColor: "blue",
     backgroundImage: `url(${backgroundImage})`,
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
-  
   },
   box: {
     margin: "0",
     padding: "0",
-    color:"white",
+    color: "white",
   },
   titleBox: {
-  marginBottom:"30px",
+    marginBottom: "30px",
   },
   contentBox: {
-    fontSize:"1.5rem",
-    fontWeight:"100",
+    fontSize: "1.5rem",
+    fontWeight: "100",
   },
   buttonContainer: {
     position: "absolute",
@@ -79,7 +78,7 @@ const styles = {
   },
   btn1: {
     backgroundColor: "none",
-    color:"white",
+    color: "white",
   },
 };
 

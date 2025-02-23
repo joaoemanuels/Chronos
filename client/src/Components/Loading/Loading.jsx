@@ -1,13 +1,25 @@
-import React from 'react';
-import './Loading.css';
+import { useEffect, useState } from "react";
+import React from "react";
+import Logo from "../../assets/icon/tokenlogo.png";
+import "./Loading.css";
 
-const Loading = () => {
+const Preloader = ({ onFinish }) => {
+  const [visible, setVisible] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setVisible(false);
+      onFinish();
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, [onFinish]);
+
   return (
-    <div className="loading-container">
-      <div className="spinner"></div>
-      <p>Carregando...</p>
+    <div className={`preload-container ${visible ? "" : "hidden"}`}>
+      <img className="preload-logo" src={Logo} alt="Logo" />
     </div>
   );
 };
 
-export default Loading;
+export default Preloader;
