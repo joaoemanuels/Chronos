@@ -1,10 +1,10 @@
 .calendarContainer {
-  max-width: 400px;
+  width: 100%;
   margin: 0 auto;
-  background-color: #1f1c38;
+  background-color: #ececec;
   border-radius: 10px;
   padding: 16px;
-  color: #fff;
+  color: #000000;
   font-family: sans-serif;
 
   .header {
@@ -14,12 +14,13 @@
     margin-bottom: 8px;
 
     .navButton {
-      background-color: #403e5b;
+      background-color: none;
       border: none;
-      color: #fff;
+      color: #000000;
       padding: 8px 12px;
       cursor: pointer;
       border-radius: 4px;
+      font-size: 3rem;
     }
 
     .addButton {
@@ -29,12 +30,36 @@
       padding: 8px 12px;
       cursor: pointer;
       border-radius: 4px;
+      background: none;
     }
 
     .monthTitle {
       margin: 0;
-      font-size: 1.2rem;
+      font-size: 1.8rem;
       text-transform: capitalize;
+    }
+  }
+  .formToggleContainer {
+    margin: 0 0 20px 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .FormTitle{
+      font-size: 3rem;
+      font-weight: 700;
+      color: rgb(86, 86, 244);
+    }
+
+    .addButton {
+      background-color: blue;
+      border-radius: 30%;
+      padding: 0 15px;
+      border: none;
+      color: white;
+      margin: 0;
+      font-size: 2.5rem;
     }
   }
 
@@ -42,24 +67,29 @@
     display: flex;
     justify-content: space-between;
     background-color: #2f2c49;
-    padding: 8px 0;
+    padding: 15px 0;
     border-radius: 4px;
+    color: white;
+    border-bottom: 1px solid white;
 
     .weekDay {
       flex: 1;
       text-align: center;
       font-weight: bold;
+      
     }
   }
 
   .weekRow {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 4px;
+    background-color: #2f2c49;
+    color: white;
+    padding: 10px 0;
+    font-size: 1rem;
 
     .dayCell {
       flex: 1;
-      margin: 2px;
       padding: 10px 0;
       text-align: center;
       border-radius: 4px;

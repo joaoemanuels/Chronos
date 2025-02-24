@@ -83,6 +83,28 @@ function Calendar() {
 
   return (
     <div className="calendarContainer">
+      {/* Botão para mostrar formulário de adicionar evento */}
+      <div className="formToggleContainer">
+        <div>
+          <button
+            className="addButton"
+            onClick={() => setShowAddForm(!showAddForm)}
+          >
+            =
+          </button>
+        </div>
+
+        <div className="FormTitle">
+          <p>Chronos</p>
+        </div>
+        <button
+          className="addButton"
+          onClick={() => setShowAddForm(!showAddForm)}
+        >
+          +
+        </button>
+      </div>
+
       {/* Header com setas e nome do mês */}
       <div className="header">
         <button onClick={handlePrevMonth} className="navButton">
@@ -91,16 +113,6 @@ function Calendar() {
         <h2 className="monthTitle">{currentDate.format("MMMM YYYY")}</h2>
         <button onClick={handleNextMonth} className="navButton">
           {">"}
-        </button>
-      </div>
-
-      {/* Botão para mostrar formulário de adicionar evento */}
-      <div className="formToggleContainer">
-        <button
-          className="addButton"
-          onClick={() => setShowAddForm(!showAddForm)}
-        >
-          + Adicionar Evento
         </button>
       </div>
 
