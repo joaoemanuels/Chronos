@@ -4,7 +4,9 @@ import "../../App.css";
 import { Link, useNavigate } from "react-router-dom";
 import Axios from "axios";
 
-import logo from "../../LoginAssets/icon/tokenlogo.png";
+import Facebook from "../../assets/icon/Facebook.png";
+import Linkedin from "../../assets/icon/Linkedin.png";
+import Google from "../../assets/icon/Google.png";
 
 const Register = () => {
   const [email, setEmail] = useState("");
@@ -12,57 +14,38 @@ const Register = () => {
   const [password, setPassword] = useState("");
   const navigateTo = useNavigate();
 
-
   const createUser = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     Axios.post("http://localhost:3002/register", {
       Email: email,
       UserName: userName,
-      Password: password
-    }).then(()=> {
-      navigateTo('/Dashboard')
+      Password: password,
+    }).then(() => {
+      navigateTo("/Dashboard");
 
-      setEmail('')
-      setUserName('')
-      setPassword('')
-    })
+      setEmail("");
+      setUserName("");
+      setPassword("");
+    });
   };
   return (
     <div className="registerPage flex">
       <div className="container flex">
-        <div className="videoDiv">
-          <video src=""></video>
-
-          <div className="textDiv">
-            <h2 className="title">
-              sghhgerherherherherhesdfrgat4w5hfsda45here
-            </h2>
-          </div>
-
-          <div className="footerDiv flex">
-            <span className="text">Já possui conta?</span>
-            <Link to={"/Login"}>
-              <button className="btn">Login</button>
-            </Link>
-          </div>
-        </div>
-
         <div className="formDiv flex">
           <div className="headerDiv">
-            <img src={logo} alt="" />
-            <h3>Vamos lá</h3>
+            <h3>Vamos Começar</h3>
           </div>
 
           <form action="" className="form grid">
-            <span className="showMessage">Resgistre sstatus aquui</span>
+            <span className=""></span>
 
             <div className="inputDiv">
-              <label htmlFor="email">nome de email</label>
+              <label htmlFor="email">Email</label>
               <div className="input flex">
                 <input
                   type="email"
                   id="email"
-                  placeholder="digite seu nome de email"
+                  placeholder="digite seu email Aqui"
                   onChange={(event) => {
                     setEmail(event.target.value);
                   }}
@@ -71,7 +54,7 @@ const Register = () => {
             </div>
 
             <div className="inputDiv">
-              <label htmlFor="username">nome de usuario</label>
+              <label htmlFor="username">nome de Usuário</label>
               <div className="input flex">
                 <input
                   type="text"
@@ -90,7 +73,7 @@ const Register = () => {
                 <input
                   type="password"
                   id="password"
-                  placeholder="digite seu nome de password"
+                  placeholder="digite sua senha"
                   onChange={(event) => {
                     setPassword(event.target.value);
                   }}
@@ -98,13 +81,37 @@ const Register = () => {
               </div>
             </div>
 
+            <span className="conditions">
+              <input type="checkbox" id="checkbox" />
+              &nbsp;&nbsp;Eu concordo com o processamento de meus
+              <a href=""> dados pessoais</a>
+            </span>
+
             <button type="submit" className="btn flex" onClick={createUser}>
-              <span>Registre</span>
+              <span>Cadastrar-se</span>
             </button>
 
-            <span className="forgotPassword">
-              Esqueceu sua senha? <a href="">clique aqui</a>
-            </span>
+            <div className="loginApi">
+              <hr />
+              <div className="ContainerLogin">
+                <a href="">
+                  <img src={Google} alt="" srcset="" />
+                </a>
+                <a href=" ">
+                  <img src={Facebook} alt="" srcset="" />
+                </a>
+                <a href=" ">
+                  <img src={Linkedin} alt="" srcset="" />
+                </a>
+              </div>
+            </div>
+
+            <div className="footerDiv">
+              <span className="text">Já possui conta?</span>
+              <Link to={"/Login"}>
+                <p>&nbsp;Conecte-se</p>
+              </Link>
+            </div>
           </form>
         </div>
       </div>

@@ -5,13 +5,16 @@ import { Link, useNavigate } from "react-router-dom";
 import Axios from "axios";
 
 import logo from "../../LoginAssets/icon/tokenlogo.png";
+import Facebook from "../../assets/icon/Facebook.png";
+import Linkedin from "../../assets/icon/Linkedin.png";
+import Google from "../../assets/icon/Google.png";
 
 const Login = () => {
   const [loginUserName, setLoginUserName] = useState("");
   const [loginPassword, setLoginPassword] = useState("");
   const navigateTo = useNavigate();
 
-  const [loginStatus, setLoginStatus] = useState('');
+  const [loginStatus, setLoginStatus] = useState("");
   const [statusHolder, setstatusHolder] = useState("message");
 
   const loginUser = (e) => {
@@ -40,30 +43,14 @@ const Login = () => {
     }
   }, [loginStatus]);
 
-  const onSubmit = ()=>{
-    setLoginUserName('')
-    setLoginPassword('')
-  }
+  const onSubmit = () => {
+    setLoginUserName("");
+    setLoginPassword("");
+  };
 
   return (
     <div className="loginPage flex">
       <div className="container flex">
-        <div className="videoDiv">
-          <video src=""></video>
-
-          <div className="textDiv">
-            <h2 className="title">
-              sghhgerherherherherhesdfrgat4w5hfsda45here
-            </h2>
-          </div>
-
-          <div className="footerDiv flex">
-            <span className="text">Não tem acesso?</span>
-            <Link to={"/register"}>
-              <button className="btn">SIgn up</button>
-            </Link>
-          </div>
-        </div>
 
         <div className="formDiv flex">
           <div className="headerDiv">
@@ -109,6 +96,28 @@ const Login = () => {
             <span className="forgotPassword">
               Esqueceu sua senha? <a href="">clique aqui</a>
             </span>
+
+            <div className="loginApi">
+              <hr />
+              <div className="ContainerLogin">
+                <a href="">
+                  <img src={Google} alt="" srcset="" />
+                </a>
+                <a href=" ">
+                  <img src={Facebook} alt="" srcset="" />
+                </a>
+                <a href=" ">
+                  <img src={Linkedin} alt="" srcset="" />
+                </a>
+              </div>
+            </div>
+
+            <div className="footerDiv flex">
+              <span className="text">Não possui conta?</span>
+              <Link to={"/register"}>
+                <p>&nbsp;Crie sua Conta</p>
+              </Link>
+            </div>
           </form>
         </div>
       </div>
