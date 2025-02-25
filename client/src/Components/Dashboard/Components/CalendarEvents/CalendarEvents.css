@@ -46,7 +46,7 @@
 .calendarContainer .formToggleContainer .FormTitle {
   font-size: 3rem;
   font-weight: 700;
-  color: rgb(86, 86, 244);
+  color: #4f86c6;
 }
 .calendarContainer .formToggleContainer .addButton {
   background-color: blue;
@@ -88,17 +88,35 @@
 .calendarContainer .upcomingEvents {
   margin-top: 16px;
 }
+.calendarContainer .upcomingEvents h3 {
+  padding: 10px 0 20px 0;
+}
 .calendarContainer .upcomingEvents .card {
-  background-color: #2f2c49;
+  background-color: #4f86c6;
   margin-bottom: 8px;
   padding: 8px;
   border-radius: 4px;
   display: flex;
   align-items: center;
+  padding: 20px 20px;
+  justify-content: space-between;
+}
+.calendarContainer .upcomingEvents .card .cardInfo {
+  color: white;
+  font-size: 1.5rem;
+}
+.calendarContainer .upcomingEvents .card .cardInfo p {
+  padding: 5px 0;
+  font-size: 1.1rem;
 }
 .calendarContainer .upcomingEvents .card .cardDate {
   font-size: 0.9rem;
   color: #ccc;
+}
+.calendarContainer .upcomingEvents .card .cardInfo-btn {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
 }
 .calendarContainer .upcomingEvents .card .removeButton {
   margin-left: 8px;
