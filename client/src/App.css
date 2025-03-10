@@ -78,6 +78,70 @@ video {
   background-color: 1;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  background-color: blue;
+  background-image: url("../src/assets/backgroundWelcome.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.container .box {
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+.container .box .titleBox {
+  margin-bottom: 30px;
+}
+.container .box .contentBox {
+  font-size: 1.5rem;
+  font-weight: 100;
+}
+.container .buttonContainer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0;
+}
+.container .buttonContainer .btn {
+  text-decoration: none;
+  border: none;
+  width: 50%;
+  height: 60px;
+  background-color: #edf4fa;
+  color: #346cad;
+  font-weight: bolder;
+  border-radius: 20px 0 0 0;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .buttonContainer .btn:hover {
+  background-color: #021c8e;
+  color: white;
+}
+.container .buttonContainer .btn.btn1 {
+  background-color: transparent;
+  color: white;
+  border-radius: 0 20px 0 0;
+}
+.container .buttonContainer .btn.btn1:hover {
+  background-color: #2949d5;
+}
+
 .loginPage,
 .registerPage {
   display: flex;
@@ -114,7 +178,7 @@ video {
 .loginPage .container .formDiv .headerDiv h3,
 .registerPage .container .formDiv .headerDiv h3 {
   font-size: 40px;
-  color: #4f86c6;
+  color: #ffffff;
   font-weight: 600;
   margin-top: 10px;
   display: flex;
@@ -142,10 +206,11 @@ video {
   outline: none;
   border: none;
   width: 200px;
+  color: rgb(220, 215, 215);
 }
 .loginPage .container .formDiv .form .inputDiv label,
 .registerPage .container .formDiv .form .inputDiv label {
-  color: black;
+  color: rgb(254, 254, 254);
   font-weight: 400;
   font-size: 14px;
   padding: 0.5rem 0;
@@ -156,7 +221,7 @@ video {
   gap: 0.5rem;
   padding: 1rem;
   background: transparent;
-  border: 1px solid black;
+  border: 1px solid rgb(255, 255, 255);
   border-radius: 10px;
 }
 .loginPage .container .formDiv .form .btn,
