@@ -114,7 +114,7 @@ video {
 .loginPage .container .formDiv .headerDiv h3,
 .registerPage .container .formDiv .headerDiv h3 {
   font-size: 40px;
-  color: #4f86c6;
+  color: #ffffff;
   font-weight: 600;
   margin-top: 10px;
   display: flex;
@@ -142,10 +142,11 @@ video {
   outline: none;
   border: none;
   width: 200px;
+  color: rgb(220, 215, 215);
 }
 .loginPage .container .formDiv .form .inputDiv label,
 .registerPage .container .formDiv .form .inputDiv label {
-  color: black;
+  color: rgb(254, 254, 254);
   font-weight: 400;
   font-size: 14px;
   padding: 0.5rem 0;
@@ -156,7 +157,7 @@ video {
   gap: 0.5rem;
   padding: 1rem;
   background: transparent;
-  border: 1px solid black;
+  border: 1px solid rgb(255, 255, 255);
   border-radius: 10px;
 }
 .loginPage .container .formDiv .form .btn,
@@ -196,6 +197,10 @@ video {
   text-align: center;
   padding: 15px 0;
 }
+.loginPage .container .formDiv .form .conditions span,
+.registerPage .container .formDiv .form .conditions span {
+  color: white;
+}
 .loginPage .container .formDiv .form .conditions a,
 .registerPage .container .formDiv .form .conditions a {
   cursor: pointer;
@@ -206,6 +211,10 @@ video {
 .loginPage .container .formDiv .form .conditions a:hover,
 .registerPage .container .formDiv .form .conditions a:hover {
   color: #021c8e;
+}
+.loginPage .container .formDiv .form .forgotPassword span,
+.registerPage .container .formDiv .form .forgotPassword span {
+  color: white;
 }
 .loginPage .container .formDiv .form .forgotPassword a,
 .registerPage .container .formDiv .form .forgotPassword a {
@@ -250,7 +259,7 @@ video {
 }
 .loginPage .container .formDiv .form .footerDiv .text,
 .registerPage .container .formDiv .form .footerDiv .text {
-  color: black;
+  color: rgb(255, 255, 255);
 }
 .loginPage .container .formDiv .form .footerDiv p,
 .registerPage .container .formDiv .form .footerDiv p {

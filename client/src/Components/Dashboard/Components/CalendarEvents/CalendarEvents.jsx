@@ -17,7 +17,7 @@ function Calendar() {
       date: "2025-07-22",
       endDate: "2025-07-22",
       time: "15:00",
-      color: "#ff0000", 
+      color: "#ff0000",
     },
     {
       id: 2,
@@ -35,7 +35,7 @@ function Calendar() {
   const [newDate, setNewDate] = useState("");
   const [newEndDate, setNewEndDate] = useState("");
   const [newTime, setNewTime] = useState("");
-  const [newColor, setNewColor] = useState("#ffffff"); 
+  const [newColor, setNewColor] = useState("#ffffff");
 
   const handlePrevMonth = () => {
     setCurrentDate(currentDate.subtract(1, "month"));
@@ -144,24 +144,39 @@ function Calendar() {
             value={newDetails}
             onChange={(e) => setNewDetails(e.target.value)}
           />
-          <input
-            className="input"
-            type="date"
-            value={newDate}
-            onChange={(e) => setNewDate(e.target.value)}
-          />
-          <input
-            className="input"
-            type="date"
-            value={newEndDate}
-            onChange={(e) => setNewEndDate(e.target.value)}
-          />
-          <input
-            className="input"
-            type="time"
-            value={newTime}
-            onChange={(e) => setNewTime(e.target.value)}
-          />
+          <div className="inputContainer">
+            <label htmlFor="startDate">Data de Início</label>
+            <input
+              className="input"
+              type="date"
+              id="startDate"
+              value={newDate}
+              onChange={(e) => setNewDate(e.target.value)}
+            />
+          </div>
+
+          <div className="inputContainer">
+            <label htmlFor="endDate">Data de Fim</label>
+            <input
+              className="input"
+              type="date"
+              id="endDate"
+              value={newEndDate}
+              onChange={(e) => setNewEndDate(e.target.value)}
+            />
+          </div>
+
+          <div className="inputContainer">
+            <label htmlFor="time">Horário</label>
+            <input
+              className="input"
+              type="time"
+              id="time"
+              value={newTime}
+              onChange={(e) => setNewTime(e.target.value)}
+            />
+          </div>
+
           <div className="colorPicker">
             <label>Escolha a cor: </label>
             <input
@@ -241,6 +256,7 @@ function Calendar() {
                   backgroundColor: event.color,
                   padding: "0.2rem",
                   borderRadius: "4px",
+                  fontWeight: "bold",
                 }}
               >
                 {event.time}
