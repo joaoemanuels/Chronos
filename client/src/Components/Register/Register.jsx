@@ -82,8 +82,8 @@ const Register = () => {
             </div>
 
             <span className="conditions">
-              <input type="checkbox" id="checkbox" />
-              &nbsp;&nbsp;Eu concordo com o processamento de meus
+              <input type="checkbox" id="checkbox" required  />
+              <span>&nbsp;&nbsp;Eu concordo com o processamento de meus</span>
               <a href=""> dados pessoais</a>
             </span>
 

@@ -94,7 +94,7 @@ const Login = () => {
             </button>
 
             <span className="forgotPassword">
-              Esqueceu sua senha? <a href="">clique aqui</a>
+              <span> Esqueceu sua senha? </span> <a href="">clique aqui</a>
             </span>
 
             <div className="loginApi">

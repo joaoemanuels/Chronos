@@ -78,70 +78,6 @@ video {
   background-color: 1;
 }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  height: 100vh;
-  width: 100%;
-  margin: 0;
-  background-color: blue;
-  background-image: url("../src/assets/backgroundWelcome.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-.container .box {
-  margin: 0;
-  padding: 0;
-  color: white;
-}
-.container .box .titleBox {
-  margin-bottom: 30px;
-}
-.container .box .contentBox {
-  font-size: 1.5rem;
-  font-weight: 100;
-}
-.container .buttonContainer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  margin: 0;
-}
-.container .buttonContainer .btn {
-  text-decoration: none;
-  border: none;
-  width: 50%;
-  height: 60px;
-  background-color: #edf4fa;
-  color: #346cad;
-  font-weight: bolder;
-  border-radius: 20px 0 0 0;
-  font-size: 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.container .buttonContainer .btn:hover {
-  background-color: #021c8e;
-  color: white;
-}
-.container .buttonContainer .btn.btn1 {
-  background-color: transparent;
-  color: white;
-  border-radius: 0 20px 0 0;
-}
-.container .buttonContainer .btn.btn1:hover {
-  background-color: #2949d5;
-}
-
 .loginPage,
 .registerPage {
   display: flex;
@@ -261,6 +197,10 @@ video {
   text-align: center;
   padding: 15px 0;
 }
+.loginPage .container .formDiv .form .conditions span,
+.registerPage .container .formDiv .form .conditions span {
+  color: white;
+}
 .loginPage .container .formDiv .form .conditions a,
 .registerPage .container .formDiv .form .conditions a {
   cursor: pointer;
@@ -271,6 +211,10 @@ video {
 .loginPage .container .formDiv .form .conditions a:hover,
 .registerPage .container .formDiv .form .conditions a:hover {
   color: #021c8e;
+}
+.loginPage .container .formDiv .form .forgotPassword span,
+.registerPage .container .formDiv .form .forgotPassword span {
+  color: white;
 }
 .loginPage .container .formDiv .form .forgotPassword a,
 .registerPage .container .formDiv .form .forgotPassword a {
@@ -315,7 +259,7 @@ video {
 }
 .loginPage .container .formDiv .form .footerDiv .text,
 .registerPage .container .formDiv .form .footerDiv .text {
-  color: black;
+  color: rgb(255, 255, 255);
 }
 .loginPage .container .formDiv .form .footerDiv p,
 .registerPage .container .formDiv .form .footerDiv p {
