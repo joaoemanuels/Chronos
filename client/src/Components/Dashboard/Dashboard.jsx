@@ -6,8 +6,9 @@ import "./Dashboard.css"
 const Dashboard = () => {
   return (
     <div className="Dashboard">
-      <div className="DashboardContainer flex">
+      <div className="DashboardContainer flex   ">
         <CalendarEvents/>
+
       </div>
     </div>
   );
